@@ -77,7 +77,7 @@ df<-mutate(df,weight_cat=lapply(df$Wt,categorise_weight))
 ```
 
 **Exercise 9**
-Didin't understand this at first but realise it's meant to 
+Didin't understand this at first but realise it prepares the data so you can group it using summarize
 ```
 weight_group <- weight_groupgroup_by(df,weight_cat)
 ```
