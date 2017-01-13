@@ -15,7 +15,7 @@ names(df)
 ```
 **Exercise 3 (a)**
 
-Initially I tried this but I then on second thought, I realise it wasn't point of the question
+Initially I tried the below but I realised it wasn't point of the question
 
 ```
 select(df,Subject, Wt,Dose)
@@ -39,5 +39,10 @@ filter(df,Dose>5)
 ```
 filter(df,Dose>5 & Time > mean(Time))
 ```
+**Exercise 6**
+```
+1) arrange(df,desc(Wt))
+2) arrange(df,Wt)
+3)arrange(df, Wt, desc(Time))
 
 
