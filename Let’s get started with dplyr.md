@@ -51,3 +51,38 @@ There aren't any NA's in the data so unsure why they've asked us to use na.rm = 
 ```
 mutate(df,trend = Time-mean(Time)
 ```
+**Exercise 8**
+Saw a few comments on how to do this. This was the solution they suggested
+
+```
+mutate(df,weight_cat = ifelse(Wt<66.8,"Welterweight",ifelse(Wt<69.85,"Light-middleweight",ifelse(Wt<72.57,"Middleweight","Super-middleweight"))))
+```
+You could also write a function to categorise weight and apply that. It was a challenge so thought why not
+Here's the function
+```
+> categorise_weight<- function(x){
++ if(x<66.68){
++ print("Welterweight")
++ } else if (x<69.85) {
++ print("Light-middleweight")
++ } else if (x<72.57){
++ print("Middleweight")
++ } else
++ print("Super-middleweight")
++ }
+```
+Then using lapply we can store add the new column and store this back in df
+```
+df<-mutate(df,weight_cat=lapply(df$Wt,categorise_weight))
+```
+
+**Exercise 9**
+Didin't understand this at first but realise it's meant to 
+```
+weight_group <- weight_groupgroup_by(df,weight_cat)
+```
+
+**Exercise 10**
+```
+summarize(weight_group, Avg_time = mean(Time), Total_Dose = sum(Dose))
+```
