@@ -1,6 +1,6 @@
 ## Getting my head round popular packages such as ggplot2, dplyr etc. 
 
-###The questions I've used can found here http://r-exercises.com/2017/01/12/lets-get-started-with-dplyr/
+###Since my main job involves manaipulating data I thought I'd start with dplyr. The questions I've used can found here http://r-exercises.com/2017/01/12/lets-get-started-with-dplyr/
 
 **Exercise 1**
 
@@ -28,3 +28,16 @@ select(df,1:3)
 ```
 select(df,Wt,Dose)
 ```
+**Exercise 4**
+I haven't used the filter command before so I quickly used R help(?filter) to give me a basic idea of the function. I've found that R documentation can be a good source of help if you're not sure how to use a command.
+
+```
+filter(df,Dose>5)
+```
+**Exercise 5**
+
+```
+filter(df,Dose>5 & Time > mean(Time))
+```
+
+
