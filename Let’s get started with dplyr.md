@@ -41,8 +41,13 @@ filter(df,Dose>5 & Time > mean(Time))
 ```
 **Exercise 6**
 ```
-1) arrange(df,desc(Wt))
-2) arrange(df,Wt)
+1)arrange(df,desc(Wt))
+2)arrange(df,Wt)
 3)arrange(df, Wt, desc(Time))
+```
+**Exercise 7**
 
-
+There aren't any NA's in the data so unsure why they've asked us to use na.rm = True with the average.
+```
+mutate(df,trend = Time-mean(Time)
+```
